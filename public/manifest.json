@@ -1,0 +1,34 @@
+{
+  "short_name": "Malti Quran",
+  "name": "Malti Quran - Quran in Maltese",
+  "description": "Il-Quran bil-Malti - Traduzzjoni tal-Quran bil-Malti. Aqra u isma l-Quran bil-Malti.",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "orientation": "portrait",
+  "lang": "mt",
+  "dir": "ltr",
+  "categories": ["books", "religion", "islam"],
+  "prefer_related_applications": false
+} 

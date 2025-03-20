@@ -1,0 +1,72 @@
+.footer {
+  background-color: var(--card-background);
+  border-top: 1px solid var(--border-color);
+  padding: 2rem 0;
+  margin-top: auto;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.links {
+  display: flex;
+  gap: 2rem;
+}
+
+.links a {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  transition: color 0.2s;
+}
+
+.links a:hover {
+  color: var(--text-primary);
+}
+
+.social {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.socialLink {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  transition: color 0.2s;
+}
+
+.socialLink:hover {
+  color: var(--text-primary);
+}
+
+.copyright {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .footer {
+    padding: 1.5rem 0;
+  }
+
+  .content {
+    gap: 1rem;
+  }
+
+  .links {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .social {
+    gap: 1rem;
+  }
+} 

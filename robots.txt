@@ -1,0 +1,5 @@
+# robots.txt for maltiquran.com
+# This file allows all bots and crawlers to access and index the entire site
+
+User-agent: *
+Disallow:

@@ -1,0 +1,714 @@
+.headerWrapper {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: #fff;
+  transition: background-color 0.2s;
+}
+
+.header {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.headerContent {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoTitle {
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logoText {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+  letter-spacing: -0.01em;
+}
+
+.searchContainer {
+  position: relative;
+  width: 440px;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  color: #9ca3af;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 12px 16px 12px 44px;
+  font-size: 15px;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+  border: none;
+  border-radius: 9999px;
+  background-color: #f3f4f6;
+  outline: none;
+  transition: background-color 0.2s;
+}
+
+.searchInput:focus {
+  background-color: #e5e7eb;
+}
+
+.searchInput::placeholder {
+  color: #6b7280;
+}
+
+.userActions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.getAppBtn {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+}
+
+.getAppBtn:hover {
+  background-color: #f3f4f6;
+}
+
+/* Selection bar styles */
+.selectionBar {
+  background-color: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 12px 0;
+  position: relative;
+}
+
+.selectionBar::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #e5e7eb;
+}
+
+.selectionContent {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdowns {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.surahSelect,
+.verseSelect {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 8px 28px 8px 12px;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #111827;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236b7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 16px;
+  min-width: 140px;
+  transition: background-color 0.2s;
+}
+
+.surahSelect:hover,
+.verseSelect:hover {
+  background-color: #f3f4f6;
+  border-radius: 6px;
+}
+
+.tools {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.toolButton {
+  padding: 8px;
+  background: none;
+  border: none;
+  color: #6b7280;
+  cursor: pointer;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  width: 32px;
+  height: 32px;
+}
+
+.toolButton:hover {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+.toolIcon {
+  width: 18px;
+  height: 18px;
+}
+
+.fontSizeText {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+@media (max-width: 768px) {
+  .headerContent {
+    padding: 12px 16px;
+  }
+
+  .selectionContent {
+    padding: 0 16px;
+  }
+
+  .searchContainer {
+    width: 320px;
+  }
+
+  .getAppBtn {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .logoText {
+    font-size: 18px;
+  }
+
+  .searchInput {
+    font-size: 14px;
+    padding: 10px 16px 10px 40px;
+  }
+
+  .surahSelect,
+  .verseSelect {
+    font-size: 13px;
+    min-width: 120px;
+  }
+
+  .toolIcon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .searchContainer {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.logo a {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111;
+  text-decoration: none;
+}
+
+.search {
+  position: relative;
+  flex: 1;
+  max-width: 400px;
+}
+
+.select {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-family: Inter, sans-serif;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  outline: none;
+  background-color: #fff;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.select:focus {
+  border-color: #4b5563;
+}
+
+.mainNav {
+  display: flex;
+  margin-left: 2rem;
+}
+
+.navLink {
+  padding: 0.5rem 0.75rem;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.navLink:hover {
+  color: #000;
+}
+
+.languageBtn, .profileBtn {
+  background: none;
+  border: none;
+  color: #333;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.profileBtn {
+  background-color: #000;
+  color: white;
+}
+
+/* Bible Navigation */
+.bibleNav {
+  height: 48px;
+  border-bottom: 1px solid #e5e5e5;
+  background: #fff;
+}
+
+.bibleNavContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  height: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.leftSection {
+  display: flex;
+  gap: 8px;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-left: auto;
+}
+
+.dropdownButton {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  border: none;
+  background: none;
+  font-size: 14px;
+  color: #1a1a1a;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.dropdownButton:hover {
+  background: #f5f5f5;
+}
+
+.arrowDown {
+  font-size: 10px;
+  margin-top: 2px;
+}
+
+.fontIcon {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Dropdowns */
+.dropdown {
+  position: absolute;
+  top: 104px;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-height: calc(100vh - 104px);
+  overflow-y: auto;
+}
+
+.searchBox {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.surahList,
+.versionList {
+  padding: 8px 0;
+}
+
+.surahItem,
+.versionItem {
+  width: 100%;
+  padding: 12px 16px;
+  text-align: left;
+  border: none;
+  background: none;
+  font-size: 14px;
+  color: #1a1a1a;
+  cursor: pointer;
+}
+
+.surahItem:hover,
+.versionItem:hover {
+  background: #f5f5f5;
+}
+
+.selected {
+  background: #f0f0f0;
+  font-weight: 500;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.menuItems {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.menuLink:hover {
+  color: #666;
+}
+
+.searchAndProfile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.searchButton {
+  position: absolute;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+}
+
+.getApp {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.profileButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f1f1;
+}
+
+.dropdownContainer {
+  display: flex;
+  gap: 1rem;
+}
+
+.toolButtons {
+  display: flex;
+  gap: 1rem;
+}
+
+.toolButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
+
+.fontSizeText {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  z-index: 101;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+}
+
+.menuHeader {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.filterInput {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+}
+
+.versionInfo {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.changeButton {
+  color: #3396ff;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+  font-weight: 500;
+}
+
+.menuList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.menuItem {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+.menuItem:hover {
+  background-color: #f9f9f9;
+}
+
+.siteTitle {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0.1rem;
+}
+
+.siteTitle h1,
+.siteTitle h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.siteTitle h1 {
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.siteTitle h2 {
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.arabic {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--accent-color);
+  font-family: 'Scheherazade New', serif;
+}
+
+.malti {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+.description {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-align: center;
+  margin-top: 0.25rem;
+}
+
+/* Bible.com-inspired navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoImage {
+  width: 40px;
+  height: 40px;
+  margin-right: 0.5rem;
+}
+
+.siteName {
+  font-size: 2rem;
+  font-family: 'Playfair Display', serif;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navList li {
+  margin-left: 1rem;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: #0070f3;
+}
+
+.hamburger {
+  font-size: 1.75rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.hamburger:focus {
+  outline: none;
+}
+
+/* Menu styling */
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Dark mode styles */
+.darkMode.headerWrapper {
+  background-color: #1a1a1a;
+}
+
+.darkMode .header {
+  border-bottom-color: #2d2d2d;
+}
+
+.darkMode .logoText {
+  color: #fff;
+}
+
+.darkMode .searchInput {
+  background-color: #2d2d2d;
+  color: #fff;
+}
+
+.darkMode .searchInput::placeholder {
+  color: #9ca3af;
+}
+
+.darkMode .searchIcon {
+  color: #9ca3af;
+}
+
+.darkMode .getAppBtn {
+  color: #fff;
+}
+
+.darkMode .getAppBtn:hover {
+  background-color: #2d2d2d;
+}
+
+.darkMode .selectionBar {
+  background-color: #1a1a1a;
+  border-bottom-color: #2d2d2d;
+}
+
+.darkMode .selectionBar::after {
+  background-color: #2d2d2d;
+}
+
+.darkMode .surahSelect,
+.darkMode .verseSelect {
+  color: #fff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%239ca3af'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.darkMode .surahSelect:hover,
+.darkMode .verseSelect:hover {
+  background-color: #2d2d2d;
+}
+
+.darkMode .toolButton {
+  color: #9ca3af;
+}
+
+.darkMode .toolButton:hover {
+  background-color: #2d2d2d;
+  color: #fff;
+} 

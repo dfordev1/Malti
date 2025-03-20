@@ -1,0 +1,148 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color);
+}
+
+.main {
+  flex: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 2rem 1rem;
+}
+
+.loading {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+}
+
+.error {
+  color: var(--error-color);
+  text-align: center;
+  padding: 2rem;
+  background-color: rgba(239, 68, 68, 0.05);
+  border-radius: 0.5rem;
+  margin: 2rem auto;
+  max-width: 800px;
+}
+
+.verseContainer {
+  background-color: var(--card-background);
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px var(--shadow-color);
+  overflow: hidden;
+}
+
+.verseHeader {
+  padding: 2rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.verseHeader h1 {
+  margin: 0;
+  font-size: var(--surah-title-size);
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.verseHeader h2 {
+  margin: 0.5rem 0 0;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+.verseContent {
+  padding: 2rem;
+}
+
+.verse {
+  margin-bottom: 2rem;
+  position: relative;
+  padding-left: 3rem;
+}
+
+.verse:last-child {
+  margin-bottom: 0;
+}
+
+.verseNumber {
+  position: absolute;
+  left: 0;
+  top: 0.25rem;
+  font-size: var(--verse-number-size);
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.verseText {
+  font-size: var(--verse-font-size);
+  line-height: var(--verse-line-height);
+  color: var(--text-primary);
+  display: block;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  border-top: 1px solid var(--border-color);
+  background-color: var(--card-background);
+}
+
+.navButton {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  background-color: var(--hover-background);
+  color: var(--text-primary);
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.navButton:hover:not(:disabled) {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.navButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 640px) {
+  .main {
+    padding: 1rem;
+  }
+
+  .verseHeader {
+    padding: 1.5rem;
+  }
+
+  .verseContent {
+    padding: 1.5rem;
+  }
+
+  .verse {
+    padding-left: 2.5rem;
+  }
+
+  .verseText {
+    font-size: calc(var(--verse-font-size) - 1px);
+  }
+
+  .navigation {
+    padding: 1rem;
+  }
+
+  .navButton {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+  }
+} 

@@ -1,0 +1,159 @@
+.verseDisplay {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  width: 100%;
+}
+
+.pageTitle {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.verseContent {
+  margin-bottom: 2rem;
+}
+
+.flowingText {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.verseInFlow {
+  margin-right: 0.25rem;
+}
+
+.currentVerse {
+  background-color: rgba(255, 245, 170, 0.5);
+  border-radius: 3px;
+  padding: 2px 0;
+}
+
+.verseNumber {
+  font-size: 0.75rem;
+  color: #666;
+  margin-right: 0.25rem;
+  font-weight: 500;
+  top: -0.5em;
+  position: relative;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.navButton {
+  background: none;
+  border: 1px solid #e5e7eb;
+  color: #666;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.navButton:hover:not(:disabled) {
+  background: #f3f4f6;
+  color: #333;
+}
+
+.navButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.loading {
+  text-align: center;
+  color: #666;
+  font-size: 1.125rem;
+  padding: 2rem;
+}
+
+.message {
+  text-align: center;
+  color: #666;
+  font-size: 1.125rem;
+  padding: 2rem;
+}
+
+.error {
+  text-align: center;
+  color: #dc2626;
+  font-size: 1.125rem;
+  padding: 2rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .verseDisplay {
+    padding: 1.5rem 1rem;
+  }
+
+  .pageTitle {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .flowingText {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .navButton {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .verseDisplay {
+    padding: 1rem 0.5rem;
+  }
+
+  .pageTitle {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .flowingText {
+    font-size: 0.875rem;
+  }
+
+  .navButton {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+  }
+} 
